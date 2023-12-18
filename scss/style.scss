@@ -1,0 +1,48 @@
+@charset 'utf-8';
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.multimedia {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.inner {
+		width: 1180px;
+		.container {
+			width: 100%;
+			.videoDiv {
+				video {
+					width: 100%;
+					vertical-align: middle;
+				}
+				&.on {
+					position: fixed;
+					right: 20px;
+					width: 420px;
+					height: auto;
+					max-width: 100%;
+					box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+					animation: slideUp 0.3s ease-in-out forwards;
+				}
+			}
+		}
+		.content {
+			margin-top: 50px;
+			padding: 0 40px;
+			p {
+				padding: 100px;
+			}
+		}
+	}
+}
+
+@keyframes slideUp {
+	to {
+		bottom: 20px;
+	}
+}
